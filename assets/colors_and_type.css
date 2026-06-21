@@ -1,0 +1,150 @@
+/* ============================================================
+   TERRACE — Colours & Type
+   The home of non-league football culture.
+   Load this file for the full token set (CSS custom properties).
+   Fonts are loaded from Google Fonts (Bebas Neue + Libre Franklin),
+   which ARE the brand's intended faces.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+  /* ---------- BRAND CORE PALETTE ---------- */
+  --claret:        #7A1F2B; /* primary — classic English matchday */
+  --mustard:       #E0A52E; /* accent — rivets, highlights, badges */
+  --cream:         #F3EBDD; /* paper / light surface */
+  --bottle-green:  #1F3D2B; /* dark / secondary — app icon, deep surfaces */
+  --concrete:      #8A8F98; /* neutral grey — terrace concrete */
+  --ink:           #161311; /* near-black text */
+
+  /* ---------- CLARET RAMP ---------- */
+  --claret-900: #4A0F18;
+  --claret-800: #5E1721;
+  --claret-700: #7A1F2B; /* base */
+  --claret-600: #8E2A37;
+  --claret-500: #A53A48;
+  --claret-300: #C98591;
+  --claret-100: #EAD2D6;
+
+  /* ---------- BOTTLE GREEN RAMP ---------- */
+  --green-900: #122418;
+  --green-800: #18301F;
+  --green-700: #1F3D2B; /* base */
+  --green-600: #2C5239;
+  --green-500: #3C6B4C;
+  --green-300: #7AA088;
+  --green-100: #D6E2DA;
+
+  /* ---------- MUSTARD RAMP ---------- */
+  --mustard-700: #B27E1C;
+  --mustard-600: #C98F25;
+  --mustard-500: #E0A52E; /* base */
+  --mustard-400: #E9B856;
+  --mustard-200: #F4DCA3;
+
+  /* ---------- CREAM / PAPER RAMP ---------- */
+  --paper:       #F3EBDD; /* base cream */
+  --paper-50:    #FBF7EF; /* lightest, raised surface */
+  --paper-100:   #F7F1E6;
+  --paper-200:   #EBE0CC; /* hairline / sunken */
+  --paper-300:   #DECDAF; /* borders on cream */
+
+  /* ---------- CONCRETE / NEUTRAL RAMP ---------- */
+  --concrete-900: #2A2D31;
+  --concrete-700: #4C5158;
+  --concrete-500: #8A8F98; /* base */
+  --concrete-300: #B7BBC1;
+  --concrete-200: #D2D5D9;
+  --concrete-100: #E7E9EB;
+
+  /* ---------- SEMANTIC: SURFACES ---------- */
+  --bg:            var(--paper);       /* default page = cream */
+  --bg-raised:     var(--paper-50);    /* cards on cream */
+  --bg-sunken:     var(--paper-200);
+  --bg-inverse:    var(--claret-700);  /* claret block */
+  --bg-deep:       var(--green-700);   /* deep green block */
+  --hairline:      var(--paper-300);   /* borders on cream */
+  --hairline-deep: rgba(243,235,221,0.18); /* borders on dark */
+
+  /* ---------- SEMANTIC: TEXT ---------- */
+  --fg1:    var(--ink);                /* primary text on cream */
+  --fg2:    #4A423B;                   /* secondary text on cream */
+  --fg3:    #756B61;                   /* muted / captions on cream */
+  --fg-on-claret:  var(--cream);       /* text on claret */
+  --fg-on-green:   var(--cream);       /* text on green */
+  --fg-on-claret-muted: rgba(243,235,221,0.72);
+  --on-accent:     var(--ink);         /* text on mustard */
+  --link:          var(--claret-700);
+
+  /* ---------- SEMANTIC: STATUS ---------- */
+  --success: #2C5239; /* green */
+  --warning: var(--mustard-500);
+  --danger:  #B23A2E; /* warm red-brick */
+  --info:    #3C5A77;
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-display: 'Bebas Neue', 'Oswald', 'Arial Narrow', sans-serif;
+  --font-body:    'Libre Franklin', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ---------- TYPE SCALE (display = Bebas, condensed caps) ---------- */
+  --display-1: 700 clamp(64px, 9vw, 132px)/0.92 var(--font-display);
+  --display-2: 700 clamp(48px, 6vw, 88px)/0.94 var(--font-display);
+  --h1: 400 clamp(40px, 5vw, 68px)/0.96 var(--font-display);
+  --h2: 400 clamp(30px, 3.4vw, 46px)/0.98 var(--font-display);
+  --h3: 400 28px/1.0 var(--font-display);
+
+  /* ---------- TYPE SCALE (body = Libre Franklin) ---------- */
+  --title:     600 22px/1.25 var(--font-body);
+  --body-lg:   400 18px/1.55 var(--font-body);
+  --body:      400 16px/1.55 var(--font-body);
+  --body-sm:   400 14px/1.5  var(--font-body);
+  --caption:   500 12px/1.4  var(--font-body);
+  --overline:  600 12px/1.3  var(--font-body); /* uppercase, tracked */
+  --label:     600 14px/1.2  var(--font-body);
+
+  /* Display caps want a touch of tracking; matchday-banner feel */
+  --tracking-display: 0.01em;
+  --tracking-overline: 0.16em;
+
+  /* ---------- RADII ---------- */
+  --r-xs: 3px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+  --r-pill: 999px;
+  --r-card: var(--r-lg);
+
+  /* ---------- SPACING (4px base) ---------- */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px;
+  --s-12: 48px; --s-16: 64px; --s-20: 80px; --s-24: 96px;
+
+  /* ---------- SHADOWS / ELEVATION ---------- */
+  /* Warm, low, matter-of-fact. Nothing glossy. */
+  --shadow-sm: 0 1px 2px rgba(22,19,17,0.08);
+  --shadow-md: 0 2px 6px rgba(22,19,17,0.10), 0 1px 2px rgba(22,19,17,0.06);
+  --shadow-lg: 0 8px 24px rgba(22,19,17,0.12);
+  --shadow-card: 0 1px 0 var(--paper-300), 0 2px 8px rgba(74,15,24,0.06);
+  --ring-focus: 0 0 0 3px rgba(224,165,46,0.45); /* mustard focus ring */
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT DEFAULTS — opt in via .tc-prose or apply vars
+   ============================================================ */
+.tc-display-1 { font: var(--display-1); letter-spacing: var(--tracking-display); text-transform: uppercase; color: var(--fg1); margin: 0; }
+.tc-display-2 { font: var(--display-2); letter-spacing: var(--tracking-display); text-transform: uppercase; color: var(--fg1); margin: 0; }
+.tc-h1 { font: var(--h1); letter-spacing: var(--tracking-display); text-transform: uppercase; color: var(--fg1); margin: 0; }
+.tc-h2 { font: var(--h2); letter-spacing: var(--tracking-display); text-transform: uppercase; color: var(--fg1); margin: 0; }
+.tc-h3 { font: var(--h3); letter-spacing: var(--tracking-display); text-transform: uppercase; color: var(--fg1); margin: 0; }
+.tc-title { font: var(--title); color: var(--fg1); margin: 0; }
+.tc-body { font: var(--body); color: var(--fg1); }
+.tc-body-lg { font: var(--body-lg); color: var(--fg1); }
+.tc-small { font: var(--body-sm); color: var(--fg2); }
+.tc-caption { font: var(--caption); color: var(--fg3); }
+.tc-overline {
+  font: var(--overline); text-transform: uppercase;
+  letter-spacing: var(--tracking-overline); color: var(--claret-700);
+}
+.tc-mono { font: var(--font-mono); }
